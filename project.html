@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style1.css" />
-    <title>Web Design Mastery | Responsive Portfolio</title>
+    <title>Projects | Tanisa</title>
   </head>
 
   <body>
@@ -32,63 +32,173 @@
     </nav>
     <section class="projects-section">
       <h1>My Projects</h1>
-      <p>Here are some of the projects I have worked on. Each project reflects my skills and knowledge in different areas.</p>
+      <p class="project-tagline">
+        From academic foundations to real-world applications 🚀
+      </p>
 
-      <div class="projects-container">
-          <!-- Project 1 -->
-          <div class="project-card">
-              <img src="img/future_path_logo.jpg" alt="Project 1">
-              <h2>FUTURE P@TH : Students’ one-stop solution</h2>
-              <p>A personal guide to a successful career. It involved technologies such as App sheet, Google site, Google sheet, App script etc.</p>
-              <a href="https://sites.google.com/view/itfuturepath/home" target="_blank" class="project-link">View</a>
-          </div>
+      <!-- ===== Project Category Buttons ===== -->
+      <div class="project-category-cards">
 
-          <!-- Project 2 -->
-          <div class="project-card">
-              <img src="img/Cara.png" alt="Project 2">
-              <h2>Cara</h2>
-              <p>It's an e-commerse website. This project was focused on building a web application using HTML, CSS, and Javascript.</p>
-              <a href="img/Ecommerse%20Website/Index.html" target="_blank" class="project-link">View</a>
-          </div>
-
-          <!-- Project 3 -->
-          <div class="project-card">
-              <img src="img/Cal.png" alt="Project 3">
-              <h2>Calculator</h2>
-              <p>This project was focused on building a web application using HTML, CSS, and Javascript.</p>
-              <a href="img/Calculator/Calculator.html" target="_blank" class="project-link">View</a>
-          </div>
-
-          <!-- Project 4 -->
-          <div class="project-card">
-            <img src="img/ToDo.jpg" alt="Project 3">
-            <h2>To-Do App</h2>
-            <p>It's a To Do app list. This project was focused on building a web application using HTML, CSS, and Javascript.</p>
-            <a href="img/TO-DO%20App/index.html" target="_blank" class="project-link">View</a>
+        <div class="category-card" onclick="showProjects('academic')">
+          <i class="ri-book-2-line"></i>
+          <h3>Academic Projects</h3>
+          <p>University & curriculum-based projects</p>
         </div>
 
-        <!-- Project 5 -->
-        <div class="project-card">
-          <img src="img/Connect4game.jpg" alt="Project 3">
-          <h2>Connect 4 Game</h2>
-          <p>It is a connect 4 game. This project was focused on building a web application using HTML, CSS, and Javascript.</p>
-          <a href="img/CONNECT%204%20GAME/connect4.html" target="_blank" class="project-link">View</a>
+        <div class="category-card" onclick="showProjects('personal')">
+          <i class="ri-code-s-slash-line"></i>
+          <h3>Personal Projects</h3>
+          <p>Self-driven & skill-building projects</p>
+        </div>
+      
+        <div class="category-card" onclick="showProjects('aiml')">
+          <i class="ri-brain-line"></i>
+          <h3>AI / ML Projects</h3>
+          <p>Intelligent systems & predictive models</p>
+        </div>
       </div>
 
-      <!-- Project 6 -->
+      <!-- ===== Project Stats ===== -->
+      <div class="project-stats">
+        <div>
+          <h2>6+</h2>
+          <p>Projects Completed</p>
+        </div>
+        <div>
+          <h2>5+</h2>
+          <p>Technologies Used</p>
+        </div>
+        <div>
+          <h2>2+</h2>
+          <p>Domains Explored</p>
+        </div>
+      </div>
+
+
+      <!-- ===== Academic Projects ===== -->
+      <div id="academic" class="projects-container hidden">
+
+        <!--<div class="project-card">
+          <img src="img/blank.jpg" alt="FuturePath">
+          <h2>FUTURE P@TH : Students’ One-Stop Solution</h2>
+          <p>
+            An academic project designed to guide students in career planning using
+            AppSheet, Google Sites, Google Sheets, and App Script.
+          </p>
+          <a href="https://sites.google.com/view/itfuturepath/home" target="_blank" class="project-link"> View </a>
+        </div>
+      -->
+
+        <div class="project-card">
+          <img src="img/RealTimeFacialEmotionDetection.jpg" alt="REAL-TIME FACE EMOTION DETECTION USING AI/ML">
+          <h2>REAL-TIME FACE EMOTION DETECTION USING AI/ML </h2>
+          <p>
+            Real-Time Face Emotion Detection using AI/ML analyzes facial expressions through live video to identify human emotions accurately and instantly.
+          </p>
+          <a href="https://github.com/Tanisa-2003/REAL-TIME-FACE-EMOTION-DETECTION-USING-AI-ML" target="_blank" class="project-link"> View </a>
+        </div>
+
+        <div class="project-card">
+          <img src="img/future_path_logo.jpg" alt="FuturePath">
+          <h2>FUTURE P@TH : Students’ One-Stop Solution</h2>
+          <p>
+            An academic project designed to guide students in career planning using
+            AppSheet, Google Sites, Google Sheets, and App Script.
+          </p>
+          <a href="https://sites.google.com/view/itfuturepath/home" target="_blank" class="project-link">
+            View
+          </a>
+        </div>
+
+      </div>
+
+      <!-- ===== Personal Projects ===== -->
+      <div id="personal" class="projects-container hidden">
+
+        <div class="project-card">
+          <img src="img/Cara.png" alt="Cara">
+          <h2>Cara – E-commerce Website</h2>
+          <p>Frontend e-commerce website built using HTML, CSS, and JavaScript.</p>
+          <a href="img/Ecommerse%20Website/Index.html" target="_blank" class="project-link">View</a>
+        </div>
+
+        <div class="project-card">
+          <img src="img/Cal.png" alt="Calculator">
+          <h2>Calculator</h2>
+          <p>Responsive calculator application using HTML, CSS, and JavaScript.</p>
+          <a href="img/Calculator/Calculator.html" target="_blank" class="project-link">View</a>
+        </div>
+
+        <div class="project-card">
+          <img src="img/ToDo.jpg" alt="To-Do App">
+          <h2>To-Do App</h2>
+          <p>Task management web application built using JavaScript.</p>
+          <a href="img/TO-DO%20App/index.html" target="_blank" class="project-link">View</a>
+        </div>
+
+        <div class="project-card">
+          <img src="img/Connect4game.jpg" alt="Connect 4">
+          <h2>Connect 4 Game</h2>
+          <p>Interactive Connect 4 game developed using HTML, CSS, and JavaScript.</p>
+          <a href="img/CONNECT%204%20GAME/connect4.html" target="_blank" class="project-link">View</a>
+        </div>
+
+        <div class="project-card">
+          <img src="img/basic_calculator.jpg" alt="Python Calculator">
+          <h2>Basic Calculator (Python)</h2>
+          <p>Lightweight calculator built using Python, NumPy, and Tkinter.</p>
+          <a href="img/simple_calculator.py" target="_blank" class="project-link">View</a>
+        </div>
+
+      </div>
+
+      <!-- ===== AI / ML Projects ===== -->
+      <div id="aiml" class="projects-container hidden">
+
+        <div class="project-card">
+        <img src="img/personality_predictor.jpg" alt="Personality Predictor">
+        <h2>Personality Predictor</h2>
+        <p>
+          AI-based machine learning application that predicts personality traits using user input data.
+        </p>
+        <a href="https://github.com/Tanisa-2003/Personality_predict" target="_blank" class="project-link"> View </a>
+      </div>
+
       <div class="project-card">
-        <img src="img/basic_calculator.jpg" alt="Project 3">
-        <h2>Basic Calculator</h2>
-        <p>Simple and easy to use light weight calculator built with NumPy, tkinter where basic arithmetic errors were controlled.</p>
-        <a href="img/simple_calculator.py" target="_blank" class="project-link">View</a>
+        <img src="img/WaterIntakePredictor.jpg" alt="Water Intake Predictor">
+        <h2>Water Intake Predictor</h2>
+        <p>
+          Machine learning model that predicts daily water intake requirements based on user health and lifestyle parameters.
+        </p>
+        <a href="https://github.com/Tanisa-2003/WaterIntakePredictor"target="_blank" class="project-link"> View </a>
+      </div>
     </div>
 
-  </div>
-      </div>
-  </section>
+    </section>
+
+    <script>
+      function showProjects(type) {
+        const sections = ["academic", "personal", "aiml"];
+
+        sections.forEach(id => {
+          document.getElementById(id).classList.add("hidden");
+        });
+
+        const activeSection = document.getElementById(type);
+        activeSection.classList.remove("hidden");
+
+        // 👇 Auto scroll to the section
+        activeSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    </script>
+
+
 
   <footer>
-      <p>&copy; 2024 Tanisa Parui. All rights reserved.</p>
+      <p>&copy; 2026 Tanisa Parui. All rights reserved.</p>
   </footer>
   </body>
 </html>

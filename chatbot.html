@@ -1,0 +1,176 @@
+
+<!-- CHATBOT -->
+<div id="chatbot-container">
+
+    <!-- Robo Icon -->
+    <div id="chatbot-icon">
+        <img src="img/Bot18.gif" alt="Chatbot">
+    </div>
+
+    <!-- Chat Box -->
+    <div id="chatbot-box">
+        <div class="chat-header">
+            <span>Portfolio Assistant 🤖</span>
+            <button id="close-chat">×</button>
+        </div>
+
+        <div class="chat-body" id="chat-body">
+            <div class="bot-msg">Hi 👋 I can help you explore this portfolio.</div>
+        </div>
+
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type here...">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+</div>
+
+<!-- CSS -->
+<style>
+    
+    #chatbot-container {
+        position: fixed;
+        bottom: 20px;
+        right: 5px;
+        z-index: 999999;   /* 🔥 VERY HIGH */
+        pointer-events: auto;
+        font-family: Poppins, sans-serif;
+    }
+
+    /* Robo Icon */
+    #chatbot-icon img {
+        width: 200px;
+        cursor: pointer;
+        pointer-events: auto;
+    }
+
+    /* Chat Box */
+    #chatbot-box {
+        width: 300px;
+        height: 400px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        bottom: 90px;
+        right: 0;
+        z-index: 10000;
+    }
+
+    .chat-header {
+        background: linear-gradient(135deg, #6c63ff, #857dff);
+        color: white;
+        padding: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 15px 15px 0 0;
+        font-weight: 600;
+        animation: headerSlide 0.5s ease, headerGlow 3s infinite alternate;
+    }
+
+    @keyframes headerSlide {
+        from {
+            transform: translateY(-10px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes headerGlow {
+        from {
+            box-shadow: 0 0 5px rgba(108, 99, 255, 0.4);
+        }
+        to {
+            box-shadow: 0 0 15px rgba(108, 99, 255, 0.8);
+        }
+    }
+
+    .chat-body {
+        flex: 1;
+        padding: 10px;
+        overflow-y: auto;
+        font-size: 14px;
+    }
+
+    .bot-msg {
+        background: linear-gradient(135deg, #eef0ff, #f9f9ff);
+        padding: 10px 12px;
+        margin-bottom: 10px;
+        border-radius: 15px 15px 15px 5px;
+        width: fit-content;
+        max-width: 85%;
+        animation: popIn 0.3s ease;
+    }
+
+    .user-msg {
+        background: linear-gradient(135deg, #6c63ff, #857dff);
+        color: white;
+        padding: 10px 12px;
+        margin-bottom: 10px;
+        border-radius: 15px 15px 5px 15px;
+        margin-left: auto;
+        width: fit-content;
+        max-width: 85%;
+        animation: popIn 0.3s ease;
+    }
+    @keyframes popIn {
+        from {
+            transform: scale(0.9);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .chat-input {
+        display: flex;
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .chat-input input {
+        flex: 1;
+        padding: 6px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+    }
+
+    .chat-input button {
+        background: #6c63ff;
+        border: none;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .chat-input button:hover {
+        transform: scale(1.05);
+        background: #574fff;
+    }
+
+    #close-chat {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+
+    #close-chat:hover {
+        transform: rotate(90deg) scale(1.2);
+    }
+
+</style>
+
+
+

@@ -31,10 +31,13 @@
       </div>
     </nav>
     <section class="projects-section">
-      <h1>💼 My Projects</h1>
-      <p class="project-tagline">
-        From academic foundations to real-world applications 🚀
-      </p>
+      <!-- SECTION TITLE -->
+      <div class="project-header">
+        <h2 class="project-title">
+          <span>💼</span> My Projects
+        </h2>
+        <p class="project-tagline">From academic foundations to real-world applications 🚀</p>
+      </div>
 
       <!-- ===== Project Category Buttons ===== -->
       <div class="project-category-cards">
@@ -115,12 +118,12 @@
       <!-- ===== Personal Projects ===== -->
       <div id="personal" class="projects-container hidden">
 
-        <div class="project-card">
+        <!--<div class="project-card">
           <img src="img/Cara.png" alt="Cara">
           <h2>Cara – E-commerce Website</h2>
           <p>Frontend e-commerce website built using HTML, CSS, and JavaScript.</p>
           <a href="img/Ecommerse%20Website/Index.html" target="_blank" class="project-link">View</a>
-        </div>
+        </div>-->
 
         <div class="project-card">
           <img src="img/Cal.png" alt="Calculator">
@@ -200,8 +203,11 @@
           <a href="https://github.com/Tanisa-2003/House-price-predictor"target="_blank" class="project-link"> View </a>
         </div>
       </div>
+      <div id="chatbot-root"></div>
     </section>
 
+    <!-- Script -->
+    <script src="chatbot.js"></script>
     <script>
       function showProjects(type) {
         const sections = ["academic", "personal", "aiml"];
@@ -219,12 +225,21 @@
           block: "start"
         });
       }
+
+      /* Chat bot */
+      fetch("chatbot.html")
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to load chatbot');
+        return res.text();
+      })
+      
+      .then(html => {
+        document.getElementById("chatbot-root").innerHTML = html;
+        initChatbot();
+      })
+      
+      .catch(err => console.error('Chatbot load error:', err));
     </script>
 
-
-
-  <footer>
-      <p>&copy; 2026 Tanisa Parui. All rights reserved.</p>
-  </footer>
   </body>
 </html>

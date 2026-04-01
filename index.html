@@ -13,6 +13,12 @@
   </head>
 
   <body>
+  <div id="loader">
+    <div class="line-loader"></div>
+    <span>Tanisa</span>
+    <p>Loading  my portfolio...</p>
+  </div>
+
     <nav>
       <div class="nav__content">
         <div class="logo"><a href="#">Tanisa</a></div>
@@ -46,7 +52,7 @@
 
           <div class="hero-btns">
             <a href="img/TANISA_PARUI.pdf" class="btn-primary" target="_blank">Download CV</a>
-            <a href="project.html" class="btn-outline">View Projects</a>
+            <a href="project.html" class="btn-outline">My Works ➜ </a>
           </div>
 
           <div class="social-icons">
@@ -62,10 +68,43 @@
         </div>
 
       </div>
-    </section>
-    <footer>
-      <p>© 2026 Tanisa Parui | All Rights Reserved</p>
-    </footer>
+      <div id="chatbot-root"></div>
 
+    </section>
+    
+    <!-- Script -->
+    <script src="chatbot.js"></script>
+    <script>
+
+      const loader = document.getElementById("loader");
+
+      if (sessionStorage.getItem("loaderShown")) {
+        loader.style.display = "none";
+      } else {
+        sessionStorage.setItem("loaderShown", "true");
+
+        window.addEventListener("load", () => {
+          setTimeout(() => {
+            loader.style.display = "none";
+          }, 1000); // 1 second
+        });
+      }
+
+      /* Chat bot */
+      fetch("chatbot.html")
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to load chatbot');
+        return res.text();
+      })
+      
+      .then(html => {
+        document.getElementById("chatbot-root").innerHTML = html;
+        initChatbot();
+      })
+      
+      .catch(err => console.error('Chatbot load error:', err));
+
+    </script>
+    
   </body>
 </html>

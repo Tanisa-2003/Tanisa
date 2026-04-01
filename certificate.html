@@ -32,8 +32,13 @@
     </nav>
 
     <section class="cert-section">
-      <h1>🏆 My Certifications</h1>
-      <p class="cert-tagline">Achievements that reflect my learning journey</p>
+      <!-- SECTION TITLE -->
+      <div class="cert-header">
+        <h2 class="cert-title">
+          <span>🏆</span> My Certifications
+        </h2>
+        <p class="cert-tagline">Achievements that reflect my learning journey</p>
+      </div>
 
       <div class="cert-grid">
 
@@ -80,10 +85,25 @@
         </div>
 
       </div>
+      <div id="chatbot-root"></div>
     </section>
 
-    <footer>
-      <p>&copy; 2026 Tanisa Parui. All rights reserved.</p>
-    </footer>
+    <!-- Script -->
+    <script src="chatbot.js"></script>
+    <script>
+      /* Chat bot */
+      fetch("chatbot.html")
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to load chatbot');
+        return res.text();
+      })
+      
+      .then(html => {
+        document.getElementById("chatbot-root").innerHTML = html;
+        initChatbot();
+      })
+      
+      .catch(err => console.error('Chatbot load error:', err));
+    </script>
   </body>
 </html>

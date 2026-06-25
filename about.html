@@ -70,18 +70,135 @@
         <h2>My Skills</h2>
 
         <div class="skill-tags">
-          <span>Python</span>
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>C</span>
-          <span>DSA</span>
-          <span>Machine Learning</span>
-          <span>AI</span>
-          <span>Responsive Design</span>
-          <span>Git</span>
+          <div class="skill-header">
+            <span>Python</span>
+            <div class="skill-popup">
+                Used for AI, Machine Learning,
+                Flask applications, and automation projects.
+            </div>
+          </div>
+
+          <div class="skill-header">
+            <span>HTML</span>
+            <div class="skill-popup">
+                Creates the structure and content of responsive web pages.
+            </div>
+          </div>
+      
+          <div class="skill-header">
+            <span>CSS</span>
+            <div class="skill-popup">
+                Designs modern, responsive, and visually appealing user interfaces.
+            </div>
+          </div>
+      
+          <div class="skill-header">
+            <span>JavaScript</span>
+            <div class="skill-popup">
+                Adds interactivity, dynamic content, and client-side functionality.
+            </div>
+          </div>
+       
+          <div class="skill-header">
+            <span>C</span>
+            <div class="skill-popup">
+                Developed programs using procedural programming, data structures, and problem-solving concepts.
+            </div>
+          </div>
+   
+          <div class="skill-header">
+            <span>DSA</span>
+            <div class="skill-popup">
+                Strong understanding of algorithms, problem-solving, and optimization techniques.
+            </div>
+          </div>
+  
+          <div class="skill-header">
+            <span>Machine Learning</span>
+            <div class="skill-popup">
+                Applied in MoodTune and Real-Time Face Emotion Detection for prediction and emotion analysis.
+            </div>
+          </div>
+       
+          <div class="skill-header">
+            <span>AI</span>
+            <div class="skill-popup">
+                Developed intelligent applications capable of emotion detection and personalized recommendations.
+            </div>
+          </div>
+       
+          <div class="skill-header">
+            <span>OpenCV</span>
+            <div class="skill-popup">
+                Used for image processing, face detection, and real-time emotion recognition applications.
+            </div>
+          </div>
+        
+          <div class="skill-header">
+            <span>TensorFlow/Keras</span>
+            <div class="skill-popup">
+                Built and trained deep learning models for image classification and emotion detection tasks.
+            </div>
+          </div>
+        
+          <div class="skill-header">
+            <span>Numpy</span>
+            <div class="skill-popup">
+                Performed numerical computations, array manipulation, and data preprocessing for machine learning projects.
+            </div>
+          </div>
+        
+          <div class="skill-header">
+            <span>Pandas</span>
+            <div class="skill-popup">
+                Used for data cleaning, analysis, and transformation of structured datasets.
+            </div>
+          </div>
+        
+          <div class="skill-header">
+            <span>Flask</span>
+            <div class="skill-popup">
+                Developed lightweight web applications and integrated machine learning models into web interfaces.
+            </div>
+          </div>
+        
+          <div class="skill-header">
+            <span>Scikit-learn</span>
+            <div class="skill-popup">
+                Implemented machine learning algorithms for classification, prediction, and model evaluation.
+            </div>
+          </div>
+        
+          <div class="skill-header">
+            <span>Responsive Design</span>
+            <div class="skill-popup">
+                Created mobile-friendly and responsive web interfaces that adapt seamlessly across devices.
+            </div>
+          </div>
+        
+          <div class="skill-header">
+            <span>Git/GitHub</span>
+            <div class="skill-popup">
+                Used for version control, project management, and collaborative development.
+            </div>
+          </div>
+        
+          <div class="skill-header">
+            <span>DBMS</span>
+            <div class="skill-popup">
+                Designed and managed databases using concepts such as normalization, ER diagrams, and SQL queries.
+            </div>
+          </div>
+        
+          <div class="skill-header">
+            <span>SQL</span>
+            <div class="skill-popup">
+                Performed data retrieval, manipulation, and database management using structured queries.
+            </div>
+          </div>
         </div>
 
+<div id="skill-display"></div>
         <div class="social-links">
           <a href="https://www.linkedin.com/in/tanisa-parui-b9362333a" target="_blank">
             <i class="ri-linkedin-fill"></i>
@@ -116,5 +233,19 @@
       
       .catch(err => console.error('Chatbot load error:', err));
     </script>
+<script>
+      function showSkill(skill, percent){
+
+    document.getElementById("skill-display").innerHTML = `
+        <h4>${skill} - ${percent}%</h4>
+
+        <div class="progress-bar">
+            <div class="progress"
+                 style="width:${percent}%">
+            </div>
+        </div>
+    `;
+}
+</script>
   </body>
 </html>

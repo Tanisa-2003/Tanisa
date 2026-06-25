@@ -69,59 +69,82 @@ function initChatbot(){
 
         /* ===== NAVIGATION INTENTS ===== */
 
-        if (includesAny([ "project", "projects", "work", "view your work", "what have you built", "open your project", "your creativity", "show me your creativity" ])) {
+        if (includesAny([ "project", "projects", "work", "view your work", "what have you built", "open your project", "your creativity", "show me your creativity", "what she have done", "what she creats",   "show me your projects",
+        "what projects have you built", "what have you worked on", "tell me about your projects", "show your work", "what are your best projects",
+        "what have you developed", "portfolio projects", "can i see your projects" ])) {
             addMsg("Sure 😊 Taking you to my projects📂", "bot-msg");
             setTimeout(() => {
                 window.location.href = "project.html";
             }, 1500);
         }
 
-        else if (includesAny([ "introduce yourself", "about you", "about tanisa", "who are you", "your background" ])) {
+        else if (includesAny([ "Who are you?", "tell me about yourself", "introduce yourself", "can you introduce yourself?", "what is your introduction?", "tell me about Tanisa", "who is Tanisa Parui?", 
+            "give me your profile", "what do you do?", "what are you studying?", "what is your background?", "tell me something about yourself", "i'd like to know about you", "about you", "about yourself", 
+            "who am I talking to?", "your background" ])) {
             addMsg("Let me introduce myself ✨", "bot-msg");
             setTimeout(() => {
                 window.location.href = "about.html";
             }, 1500);
         }
 
-        else if (includesAny([ "education", "study", "college", "degree", "qualification" ])) {
+        else if (includesAny([ "education", "study", "college", "degree", "qualification", "course", "what is your qualification?",
+            "what are you studying?", "which course are you pursuing?", "what is your educational background?",
+            "where did you study?", "are you an MCA student?", "what degree do you have?" ])) {
             addMsg("Here are my education details 🎓", "bot-msg");
             setTimeout(() => {
                 window.location.href = "education.html";
             }, 1500);
         }
 
-        else if (includesAny([ "certificate", "certificates", "achievement", "achievements", "awards", "accomplishments", "credentials" ])) {
+        else if (includesAny([ "certificate", "certificates", "certification", "certifications", "achievement", "achievements", "awards", 
+            "accomplishments", "credentials", "show certificates", "show certifications", "your certificates", "your achievements", "what certifications do you have",
+            "what certificates do you have", "any achievements", "show your achievements" ])) {
             addMsg("These are my achievements 📜✨", "bot-msg");
             setTimeout(() => {
                 window.location.href = "certificate.html";
             }, 1500);
         }
 
-        else if (includesAny([ "contact", "reach you", "email", "phone", "connect" ])) {
+        else if (includesAny([ "contact", "reach you", "email", "phone", "connect", "contact details", "contact information", "how can i contact you",
+            "how to contact you", "reach out", "get in touch", "connect with you", "mobile number", "linkedin", "github", "social media", "contact page",
+            "talk to you", "message you" ])) {
             addMsg("You can contact me here 📞😊", "bot-msg");
             setTimeout(() => {
                 window.location.href = "contact.html";
             }, 1500);
         }
 
+        else if (includesAny([ "resume", "cv", "curriculum vitae", "download resume", "view resume", "show resume" ])) {
+            addMsg(
+                "📄 You can view or download my resume to learn more about my skills, education, projects, and experience.",
+                "bot-msg" );
+            setTimeout(() => {
+                window.location.href = "portfolio.html";
+            }, 1500);
+        }        
+
         /* Project summaries */
-        else if (includesAny([ "face emotion", "real time face emotion detection", "tell me about real time face emotion detection project", "what's in real time face emotion detection project" ])) {
+
+        else if (includesAny([ "moodtune", "mood tune", "tell me about moodtune", "what is moodtune", "moodtune project", "what's in moodtune project",
+            "tell me about mood tune project", "what technologies you used in moodtune"
+        ])) {
             addMsg(
-                "Real-Time Face Emotion Detection uses AI and OpenCV to analyze facial expressions and identify human emotions instantly. It processes live camera input to classify emotions like happy, sad, angry, or surprised in real time 😊📷",
+                "MoodTune is an AI-powered mood analysis application that detects a user's emotional state and provides personalized recommendations such as music, activities, or insights based on the detected mood. It combines machine learning and user-friendly design to create an engaging and supportive experience. 🎵😊. \n\n🛠 Technologies used: \n• Python\n• Machine Learning\n• Pandas\n• NumPy\n• Scikit-learn\n• HTML\n• CSS\n• JavaScript\n• Flask",
                 "bot-msg"
             );
         }
 
-        else if (includesAny([ "futurepath", "tell me about futurepath project", "what's in futurepath project" ])) {
+        else if (includesAny([ "face emotion", "real time face emotion detection", "tell me about real time face emotion detection project", 
+            "what's in real time face emotion detection project", "what technologies you used in face emotion" ])) {
             addMsg(
-                "FutureP@th: Students one step solution is a student guidance web app that helps students find courses, subjects, and scholarships after 10th, 12th, and graduation. It also helps to find goverment jobs in west bengal. 📚✨",
+                "😊 Real-Time Face Emotion Detection is an AI-powered application that analyzes facial expressions and identifies human emotions in real time. It processes live camera input to classify emotions such as happy, sad, angry, surprised, and more 😊📷.\n\n🛠 Technologies Used:\n• Python\n• OpenCV\n• TensorFlow / Keras\n• NumPy\n• Pandas\n• Machine Learning\n• Deep Learning",
                 "bot-msg"
             );
         }
 
-        else if (includesAny([ "cara", "cara e-commerce website", "tell me about cara e-commerce website project", "cara e-commerce website project", "what's in cara e-commerce website project" ])) {
+        else if (includesAny([ "futurepath", "tell me about futurepath project", "what's in futurepath project", "what technologies you used in futurepath" ])) {
             addMsg(
-                "Cara is a modern, responsive eCommerce website designed for a smooth online shopping experience. It features interactive product listings, clean UI design, and mobile-friendly layouts built using HTML, CSS, and JavaScript. 🛍️✨",
+                "📚 FutureP@th: Students' One-Step Solution is a student guidance web application that helps students discover courses, subjects, scholarships, and government job opportunities in West Bengal after 10th, 12th, and graduation 📚✨.\n\n🛠 Technologies Used:\n• AppSheet\n• Google Apps Script\n• Google Sheets\n• Google Sites\n• No-Code Development ",
                 "bot-msg"
             );
         }
@@ -189,7 +212,7 @@ function initChatbot(){
             );
         }
 
-        else if (includesAny([ "desktop chatbot", "chatbot", "Tani Bot", ])) {
+        else if (includesAny([ "desktop chatbot", "chatbot", "tani Bot", ])) {
             addMsg(
                 "A desktop-based chatbot that interacts with users through a simple GUI to answer queries and assist with navigation or tasks. It uses predefined logic (and can be extended with AI) to provide quick, user-friendly responses. 🤖",
                 "bot-msg"
@@ -203,14 +226,14 @@ function initChatbot(){
             );
         }
 
-        else if (includesAny([ "Fine", "Good", "Nice", "Perfect", "It's ok" ])) {
+        else if (includesAny([ "fine", "good", "nice", "perfect", "it's ok" ])) {
             addMsg(
                 "Thats great 😊. How can I help you today?",
                 "bot-msg"
             );
         }
 
-        else if (includesAny([ "Thank You", "Thanks", "Bye", "See you later" ])) {
+        else if (includesAny([ "thank You", "thanks", "bye", "see you later" ])) {
             addMsg(
                 "Thank you for visiting Tanisa's portfolio! 💜 Have a great day, and don't hesitate to reach out through the contact section if you'd like to connect. 🚀",
                 "bot-msg"

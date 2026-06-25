@@ -189,7 +189,7 @@ function initChatbot(){
             );
         }
 
-        else if (includesAny([ "desktop chatbot", "chatbot", "Tani Bot", "tell me about iris flower classification", "what's in iris flower classification project" ])) {
+        else if (includesAny([ "desktop chatbot", "chatbot", "Tani Bot", ])) {
             addMsg(
                 "A desktop-based chatbot that interacts with users through a simple GUI to answer queries and assist with navigation or tasks. It uses predefined logic (and can be extended with AI) to provide quick, user-friendly responses. 🤖",
                 "bot-msg"
@@ -203,12 +203,19 @@ function initChatbot(){
             );
         }
 
-        else if (includesAny([ "hi", "hello", "hey", "hii", "hola" ])) {
+        else if (includesAny([ "Fine", "Good", "Nice", "Perfect", "It's ok" ])) {
             addMsg(
                 "Thats great 😊. How can I help you today?",
                 "bot-msg"
             );
         }
+
+        else if (includesAny([ "Thank You", "Thanks", "Bye", "See you later" ])) {
+            addMsg(
+                "Thank you for visiting Tanisa's portfolio! 💜 Have a great day, and don't hesitate to reach out through the contact section if you'd like to connect. 🚀",
+                "bot-msg"
+            );
+        }        
         /* Default */
         else {
             addMsg(

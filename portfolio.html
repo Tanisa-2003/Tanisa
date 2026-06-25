@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style1.css" />
+    <title>Tanisa | Portfolio</title>
+  </head>
+
+  <body>
+  <div id="loader">
+    <div class="line-loader"></div>
+    <span>Tanisa</span>
+    <p>Loading  my portfolio...</p>
+  </div>
+
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="#">Tanisa</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a class="active" href="portfolio.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="certificate.html">Certificates</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <section class="hero">
+      <div class="hero-container">
+
+        <!-- Left Content -->
+        <div class="hero-text">
+          <p class="hello">👋 Hello, I'm</p>
+          <h1>
+            <span>Tanisa Parui</span>
+          
+          </h1>
+          <h3>MCA Student | Aspiring Developer</h3>
+
+          <p class="hero-tagline">
+            Welcome to my portfolio! I'm Tanisa, an aspiring developer passionate about crafting modern, responsive, and user-friendly web applications. I love transforming ideas into real-world digital solutions while continuously exploring new technologies.
+          </p>
+
+          <div class="hero-btns">
+            <a href="img/TANISA_PARUI.pdf" class="btn-primary" target="_blank">Download CV</a>
+            <a href="project.html" class="btn-outline">My Works ➜ </a>
+          </div>
+
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/tanisa-parui-b9362333a" target="_blank"><i class="ri-linkedin-fill"></i></a>
+            <a href="https://github.com/Tanisa-2003" target="_blank"><i class="ri-github-fill"></i></a>
+            <a href="mailto:tanisaparui2003@gmail.com"><i class="ri-mail-line"></i></a>
+          </div>
+        </div>
+
+        <!-- Right Image -->
+        <div class="hero-img">
+          <img src="img/Photo.png" alt="Tanisa">
+        </div>
+
+      </div>
+      <div id="chatbot-root"></div>
+
+    </section>
+    
+    <!-- Script -->
+    <script src="chatbot.js"></script>
+    <script>
+
+      const loader = document.getElementById("loader");
+
+      if (sessionStorage.getItem("loaderShown")) {
+        loader.style.display = "none";
+      } else {
+        sessionStorage.setItem("loaderShown", "true");
+
+        window.addEventListener("load", () => {
+          setTimeout(() => {
+            loader.style.display = "none";
+          }, 1000); // 1 second
+        });
+      }
+
+      /* Chat bot */
+      fetch("chatbot.html")
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to load chatbot');
+        return res.text();
+      })
+      
+      .then(html => {
+        document.getElementById("chatbot-root").innerHTML = html;
+        initChatbot();
+      })
+      
+      .catch(err => console.error('Chatbot load error:', err));
+
+    </script>
+    
+  </body>
+</html>

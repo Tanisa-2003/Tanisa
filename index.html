@@ -1,110 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style1.css" />
-    <title>Tanisa | Portfolio</title>
-  </head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <body>
-  <div id="loader">
-    <div class="line-loader"></div>
-    <span>Tanisa</span>
-    <p>Loading  my portfolio...</p>
-  </div>
+<title>Tanisa | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow:hidden;
+}
+
+.hero{
+    width:100%;
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("img/bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    flex-direction:column;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:25px 8%;
+}
+
+.logo{
+    color:white;
+    font-size:2rem;
+    font-weight:700;
+}
+
+.logo span{
+    color:#ff4d4d;
+}
+
+nav ul{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:14px;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#ff4d4d;
+}
+
+.content{
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:white;
+}
+
+.content h1{
+    font-size:4rem;
+    margin-bottom:10px;
+}
+
+.content h3{
+    letter-spacing:3px;
+    margin-bottom:30px;
+}
+
+.btn{
+    padding:15px 40px;
+
+    background:#ff4d4d;
+    color:white;
+
+    border-radius:50px;
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    background:#ff3333;
+}
+
+.scroll{
+    position:absolute;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
+    color:white;
+    font-size:2rem;
+    animation:move 1.5s infinite;
+}
+
+@keyframes move{
+    0%{transform:translate(-50%,0);}
+    50%{transform:translate(-50%,10px);}
+    100%{transform:translate(-50%,0);}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
 
     <nav>
-      <div class="nav__content">
-        <div class="logo"><a href="#">Tanisa</a></div>
-        <label for="check" class="checkbox">
-          <i class="ri-menu-line"></i>
-        </label>
-        <input type="checkbox" name="check" id="check" />
+        <div class="logo">
+            <span>T</span>anisa
+        </div>
+
         <ul>
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="education.html">Education</a></li>
-          <li><a href="project.html">Projects</a></li>
-          <li><a href="certificate.html">Certificates</a></li>
-          <li><a href="contact.html">Contact</a></li>
+            <li><a href="portfolio.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="education.html">EDUCATION</a></li>
+            <li><a href="project.html">PROJECTS</a></li>
+            <li><a href="certificate.html">CERTIFICATES</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
         </ul>
-      </div>
     </nav>
-    
-    <section class="hero">
-      <div class="hero-container">
 
-        <!-- Left Content -->
-        <div class="hero-text">
-          <p class="hello">👋 Hello, I'm</p>
-          <h1>Tanisa <span>Parui</span></h1>
-          <h3>MCA Student | Aspiring Developer</h3>
+    <div class="content">
 
-          <p class="hero-tagline">
-            Welcome to my portfolio! I'm Tanisa, an aspiring developer passionate about crafting modern, responsive, and user-friendly web applications. I love transforming ideas into real-world digital solutions while continuously exploring new technologies.
-          </p>
+        <h1>Tanisa Parui</h1>
 
-          <div class="hero-btns">
-            <a href="img/TANISA_PARUI.pdf" class="btn-primary" target="_blank">Download CV</a>
-            <a href="project.html" class="btn-outline">My Works ➜ </a>
-          </div>
+        <h3>MCA Student & Full Stack Developer</h3>
 
-          <div class="social-icons">
-            <a href="https://www.linkedin.com/in/tanisa-parui-b9362333a" target="_blank"><i class="ri-linkedin-fill"></i></a>
-            <a href="https://github.com/Tanisa-2003" target="_blank"><i class="ri-github-fill"></i></a>
-            <a href="mailto:tanisaparui2003@gmail.com"><i class="ri-mail-line"></i></a>
-          </div>
-        </div>
+        <a href="portfolio.html" class="btn">
+            Get Started
+        </a>
 
-        <!-- Right Image -->
-        <div class="hero-img">
-          <img src="img/profile.jpg" alt="Tanisa">
-        </div>
+    </div>
 
-      </div>
-      <div id="chatbot-root"></div>
+    <div class="scroll">
+        ⌄
+    </div>
 
-    </section>
-    
-    <!-- Script -->
-    <script src="chatbot.js"></script>
-    <script>
+</section>
 
-      const loader = document.getElementById("loader");
-
-      if (sessionStorage.getItem("loaderShown")) {
-        loader.style.display = "none";
-      } else {
-        sessionStorage.setItem("loaderShown", "true");
-
-        window.addEventListener("load", () => {
-          setTimeout(() => {
-            loader.style.display = "none";
-          }, 1000); // 1 second
-        });
-      }
-
-      /* Chat bot */
-      fetch("chatbot.html")
-      .then(res => {
-        if (!res.ok) throw new Error('Failed to load chatbot');
-        return res.text();
-      })
-      
-      .then(html => {
-        document.getElementById("chatbot-root").innerHTML = html;
-        initChatbot();
-      })
-      
-      .catch(err => console.error('Chatbot load error:', err));
-
-    </script>
-    
-  </body>
+</body>
 </html>

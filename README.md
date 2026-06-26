@@ -14,9 +14,10 @@ A modern and fully responsive personal portfolio website showcasing my skills, p
 ![Projects](img/Project.jpg)
 
 ### AI Chatbot
-![Chatbot](img/Bot18.gif)
-![Chatbot Conversation](img/Ai.jpg)
-
+<p align="center">
+  <img src="img/Bot18.gif" width="420" alt="Welcome Screen">
+  <img src="img/Ai.jpg" width="420" alt="Conversation">
+</p>
 ## ✨ Features
 
 - Responsive Design

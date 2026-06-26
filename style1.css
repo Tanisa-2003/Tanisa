@@ -500,9 +500,11 @@ ul li a.active {
   margin-bottom: 10px;
 } 
 
-.about-text span { 
-  color: #6c63ff; 
-} 
+.about-text span {
+  background: linear-gradient(90deg, #6c63ff, #b144f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .about-text h3 { 
   margin: 10px 0; 
@@ -1349,16 +1351,40 @@ header nav ul li a.active {
     font-size: 36px; 
   } 
   /* PROJECT PAGE */ 
+  .projects-section{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   .projects-container { 
-    grid-template-columns: 1fr; 
+    grid-template-columns: 2fr; 
   } 
+  .project-tagline{
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 280px;
+    margin: 0 auto 30px;
+    text-align: center;
+  }
+  .project-category-cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+  }
+  .category-card{
+    width: 200%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px 15px;
+  }
   /* CERTIFICATE PAGE */ 
   .cert-grid { 
     grid-template-columns: 1fr; 
   } 
   /* CONTACT PAGE */ 
   .contact-wrapper { 
-    padding: 7rem 1rem 3rem;
+    padding: 1rem 0.1rem 1rem;
     text-align: center; 
     grid-template-columns: repeat(1, 1fr); 
   } 

@@ -78,7 +78,7 @@ function initChatbot(){
             }, 1500);
         }
 
-        else if (includesAny([ "Who are you?", "tell me about yourself", "introduce yourself", "can you introduce yourself?", "what is your introduction?", "tell me about Tanisa", "who is Tanisa Parui?", 
+        else if (includesAny([ "introduction", "intro", "Who are you?", "tell me about yourself", "introduce yourself", "can you introduce yourself?", "what is your introduction?", "tell me about Tanisa", "who is tanisa parui?", 
             "give me your profile", "what do you do?", "what are you studying?", "what is your background?", "tell me something about yourself", "i'd like to know about you", "about you", "about yourself", 
             "who am I talking to?", "your background" ])) {
             addMsg("Let me introduce myself ✨", "bot-msg");
@@ -184,35 +184,36 @@ function initChatbot(){
             );
         }
 
-        else if (includesAny([ "Personality Prediction", "Personality Predictor", "tell me about Personality Predictor", "what's in Personality Predictor project" ])) {
+        else if (includesAny([ "personality prediction", "personality predictor", "tell me about personality predictor", "what's in personality predictor project" ])) {
             addMsg(
                 "An AI/ML-based project that predicts personality traits based on user input data. It analyzes patterns in responses to estimate behavioral characteristics accurately. 🧠",
                 "bot-msg"
             );
         }
 
-        else if (includesAny([ "Water Intake", "Water Intake Predictoion", "Water Intake Predictor", "tell me about Water Intake Predictor", "what's in Water Intake Predictor project" ])) {
+        else if (includesAny([ "water intake", "water intake predictoion", "water intake predictor", "tell me about water intake predictor", "what's in water intake predictor project" ])) {
             addMsg(
                 "A machine learning project that predicts a person’s daily water intake based on health and lifestyle factors. It helps users stay hydrated by providing personalized water consumption recommendations. 💧",
                 "bot-msg"
             );
         }
 
-        else if (includesAny([ "Spam Mail", "Spam Mail Detection", "Spam Mail Detector", "tell me about Spam Mail Detector", "what's in Spam Mail Detector project" ])) {
+        else if (includesAny([ "spam mail", "spam mail detection", "spam mail detector", "tell me about spam mail detector", "what's in spam mail Detector project" ])) {
             addMsg(
                 "A machine learning–based application that classifies emails as Spam or Not Spam using text analysis. It helps users filter unwanted emails and improve inbox security. 📧",
                 "bot-msg"
             );
         }
 
-        else if (includesAny([ "House price", "Real estate", "Real Estate Price Prediction", "House Price Prediction", "tell me about House Price Prediction", "what's in House Price Prediction" ])) {
+        else if (includesAny([ "house price", "real estate", "real estate price prediction", "house price prediction", "tell me about house price prediction",
+            "what's in house price prediction" ])) {
             addMsg(
                 "A machine learning project that predicts house prices based on features like area, number of rooms, and location-related factors. It helps estimate property value using data-driven predictive models.🏠",
                 "bot-msg"
             );
         }
 
-        else if (includesAny([ "desktop chatbot", "chatbot", "tani Bot", ])) {
+        else if (includesAny([ "desktop chatbot", "chatbot", "tani bot", ])) {
             addMsg(
                 "A desktop-based chatbot that interacts with users through a simple GUI to answer queries and assist with navigation or tasks. It uses predefined logic (and can be extended with AI) to provide quick, user-friendly responses. 🤖",
                 "bot-msg"
@@ -226,14 +227,14 @@ function initChatbot(){
             );
         }
 
-        else if (includesAny([ "fine", "good", "nice", "perfect", "it's ok" ])) {
+        else if (includesAny([ "fine", "good", "nice", "perfect", "it's ok", "okk", "ok" ])) {
             addMsg(
                 "Thats great 😊. How can I help you today?",
                 "bot-msg"
             );
         }
 
-        else if (includesAny([ "thank You", "thanks", "bye", "see you later" ])) {
+        else if (includesAny([ "thank you", "thanks", "bye", "see you later" ])) {
             addMsg(
                 "Thank you for visiting Tanisa's portfolio! 💜 Have a great day, and don't hesitate to reach out through the contact section if you'd like to connect. 🚀",
                 "bot-msg"
